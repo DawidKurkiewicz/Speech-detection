@@ -14,7 +14,6 @@ recognition.addEventListener("result", e=>{
         p = document.createElement("p");
         words.appendChild(p)
     }
-    console.log(e.results)
 });
 recognition.addEventListener("end", recognition.start)
 recognition.start()
