@@ -16,5 +16,5 @@ recognition.addEventListener("result", e=>{
     }
     console.log(transcript)
 });
-.addEventListener("end", recognition.start)
-recognitirecognitionon.start()
+recognition.addEventListener("end", recognition.start)
+recognition.start()
