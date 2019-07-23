@@ -5,7 +5,7 @@ let p = document.createElement("p");
 const words = document.querySelector(".words");
 words.appendChild(p);
 recognition.addEventListener("result", e=>{
-    const transcript = Array.from(e.results)
+    const transcript = [...(e.results)]
     .map(result => result[0])
     .map(result => result.transcript)
     .join("")
@@ -14,7 +14,7 @@ recognition.addEventListener("result", e=>{
         p = document.createElement("p");
         words.appendChild(p)
     }
-    console.log(transcript)
+    console.log(e.results)
 });
 recognition.addEventListener("end", recognition.start)
 recognition.start()
